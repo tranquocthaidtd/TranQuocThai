@@ -1,7 +1,8 @@
 ---
-- name: dat ip cho loobpack
+- name: Switch
   hosts: Switch---SW1 # tên của thiết bị trong Ansible server( vì ở đây chỉ có router nên có thể để all)
 # các tác vụ
+  tasks:
     #Xem lại tất cả các cổng
     - name: Show ip
       ios_command: # Viết lệnh để gửi ở mode command line của router
