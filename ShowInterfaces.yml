@@ -1,6 +1,6 @@
 ---
 - name: Show Ip Interfaces
-  hosts: AS1
+  hosts: SW1
   gather_facts: no
 
   tasks:
