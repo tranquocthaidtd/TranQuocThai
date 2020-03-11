@@ -16,3 +16,8 @@
         - { vlan_id: 10, name: IT, interfaces: [Ethernet1/0, Ethernet1/1], delay: 15, state: suspend }
         - { vlan_id: 20, name: KeToan, interfaces: [Ethernet2/0, Ethernet2/1], state: present }
         - { vlan_id: 30, name: Guest, interfaces: [Ethernet3/0, Ethernet3/1], state: present }
+    - name: CONFIGURE GI0/2 ON IOSVL2-1 AS A TRUNK PORT WITH NATIVE VLAN 10 AND TRUNKED VLANS 3-5
+      ios_l2_interface:
+        name: Ethernet0/, Ethernet0/2, Ethernet0/3
+        mode: trunk
+        
