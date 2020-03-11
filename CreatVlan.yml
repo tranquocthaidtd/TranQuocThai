@@ -23,4 +23,5 @@
         members: ['E0/1','E0/2','E0/3']
         mode: 'lacp-static'
         state: present
+        provider: '{{ cli }}'
     - debug: var=output.stdout
