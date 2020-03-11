@@ -1,5 +1,5 @@
 ---
-- name: Show Ip Interfaces
+- name: Creat Vlan by Ansible
   hosts: AS1
   gather_facts: no
 
@@ -17,4 +17,11 @@
         - { vlan_id: 20, name: KeToan, interfaces: [Ethernet2/0, Ethernet2/1], state: present }
         - { vlan_id: 30, name: Guest, interfaces: [Ethernet3/0, Ethernet3/1], state: present }
        
+     - name: Trunk
+       ios_eth_trunk:
+         trunk_id: 100
+         members: ['E0/1','E0/2','E0/3']
+         mode: 'lacp-static'
+         state: present
+         provider: '{{ cli }}'
     - debug: var=output.stdout
