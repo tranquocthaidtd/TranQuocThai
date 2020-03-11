@@ -24,5 +24,4 @@
         mode: 'lacp-static'
         state: present
         provider: '{{ cli }}'
-         
-    - debug: var=output.stdout
+      - debug: var=output.stdout
