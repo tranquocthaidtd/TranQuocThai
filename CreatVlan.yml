@@ -25,5 +25,5 @@
               allowed_vlan: all
               pruning_vlan: all
               encapsulation: dot1q
-            state: merged
+        state: merged
     - debug: var=output.stdout
